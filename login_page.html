@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body style="background-color:lightblue;">
+<div class="container">
+    <div class="row">
+        <div class="py5 text-center">
+            <img src="{{url_for('static', filename='image.png')}}" align="middle" height="250" width="400"/>
+            <h1><center>COVID-19 E-Pass Registration</center></h1><br>
+            <p class="lead">Please fill down the details for the e-pass application process. Kindly
+            check all the details before submitting.</p>
+            <p class="lead"> Note: A person can apply again after <strong>3 days</strong> if the pass is
+            not approved.</p>
+        </div>
+    </div>
+
+    <form method="post" action="/login_page">
+        <div class="row">
+            <div class="col">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" id="fname"  name="fname"required>
+            </div>
+            <div class="col">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" id="lname" name="lname"required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="email">Email Id</label>
+                <input type="text" class="form-control" id="email" name="eid" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="srcst">Source State</label>
+                <input type="text" class="form-control" id="srcst" name="source_st" required>
+            </div>
+            <div class="col">
+                <label for="srcdt">Source District</label>
+                <input type="text" class="form-control" id="srcdt" name="source" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="destst">Destination State</label>
+                <input type="text" class="form-control" id="destst" name="destination_st" required>
+            </div>
+            <div class="col">
+                <label for="destdt">Destination District</label>
+                <input type="text" class="form-control" id="destdt" name="destination" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="phno">Phone Number</label>
+                <input type="text" class="form-control" id="phno" name="phno" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="aadharno">Aadhar Card Number</label>
+                <input type="text" class="form-control" id="aadharno" name="idcard" required>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col">
+                <label for="date">Date of Travel</label>
+                <input type="date" class="form-control" id="date" name="trip" required>
+            </div>
+        </div>
+       <br>
+        <div class="row">
+            <div class="col">
+                <b><h3>Declaration</h3></b><br>
+                <p>I hereby declare that above details are true and correct to the best of knowledge. Also,
+                    I undertake that if anything is found untrue, I shall be liable for punishment/penalty
+                    as per law. I hereby declare that I have downloaded Aarogya Setu App and have done
+                    self-assessment on Aarogya Setu App.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
